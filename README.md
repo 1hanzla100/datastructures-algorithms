@@ -14,5 +14,6 @@
         - delete by data
         - delete all
         - reverse
+        - removing duplicates
 
     - Doubly Linked List
