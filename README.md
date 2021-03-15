@@ -14,11 +14,5 @@
         - delete by data
         - delete all
         - reverse
-        ---
-        Pending
-        - Merging
-        - Duplicating
-        - sort
-        - remove duplicates
 
     - Doubly Linked List
