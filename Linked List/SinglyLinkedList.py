@@ -3,6 +3,9 @@ class Node:
         self.data = data
         self.next = next
 
+    def __str__(self):
+        return str(self.data)
+
 
 class LinkedList:
     def __init__(self):
@@ -50,7 +53,7 @@ class LinkedList:
             node.next = current
             previous.next = node
 
-            self.size += 1
+        self.size += 1
 
     def getByIndex(self, index):
         current = self.head
@@ -176,9 +179,10 @@ class LinkedList:
     def removeDuplicates(self):
         current = second = self.head
         while current is not None:
-            while second.next is not None:   
-                if second.next.data == current.data:  
-                    second.next = second.next.next   
+            while second.next is not None:
+                if second.next.data == current.data:
+                    second.next = second.next.next
+                    self.size -= 1
                 else:
                     second = second.next   # put this line in an else, to avoid skipping items
             current = second = current.next
@@ -187,7 +191,8 @@ class LinkedList:
 if __name__ == '__main__':
     ll = LinkedList()
     ll.addFirst(100)
-    ll.addFirst(100)
-
-    ll.removeDuplicates()
+    ll.addFirst(200)
+    ll.addFirst(300)
+    # ll.removeDuplicates()
+    ll.insertAtIndex(599, 3)
     ll.getAll()

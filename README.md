@@ -17,3 +17,11 @@
         - removing duplicates
 
     - Doubly Linked List
+        - Add first
+        - add last
+        - insert at index
+        - get by index
+        - get All
+
+- Stack
+- Queue
