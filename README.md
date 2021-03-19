@@ -33,6 +33,15 @@
     - removing duplicates
 
 - Stack
+  - append
+  - pop
+  - peek
+  - isEmpty
+  - getAll
 - Queue
+  - enqueue
+  - dequeue
+  - peek
+  - isEmpty
+  - getAll
 
-Fix Size Probs
