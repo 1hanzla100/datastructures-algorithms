@@ -132,7 +132,7 @@ class LinkedList:
 
             previous.next = current.next
 
-            self.size -= 1
+        self.size -= 1
 
     def deleteByData(self, data):
         current = self.head
@@ -144,18 +144,21 @@ class LinkedList:
                 current = None
                 return
 
-        while current is not None:
-            if current.data == data:
-                break
-            prev = current
-            current = current.next
+        else:
+            while current is not None:
+                if current.data == data:
+                    break
+                prev = current
+                current = current.next
 
-        if(current == None):
-            return None
+            if(current == None):
+                return None
 
-        prev.next = current.next
+            prev.next = current.next
 
-        current = None
+            current = None
+
+        self.size -= 1
 
     # Clear List Data
     def deleteAll(self):
