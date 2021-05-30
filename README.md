@@ -19,6 +19,7 @@
     - removing duplicates
 
   - Doubly Linked List
+
     - Add first
     - add last
     - insert at index
@@ -32,6 +33,8 @@
     - reverse
     - removing duplicates
 
+  - Circulae Linked List
+
 - Stack
   - append
   - pop
@@ -44,4 +47,3 @@
   - peek
   - isEmpty
   - getAll
-

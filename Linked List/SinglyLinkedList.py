@@ -12,8 +12,6 @@ class LinkedList:
         self.head = None
         self.size = 0
 
-    '''Adding Data'''
-
     def addFirst(self, data):
         self.head = Node(data, self.head)
         self.size += 1
@@ -32,7 +30,6 @@ class LinkedList:
 
         self.size += 1
 
-    # Insert at Index
     def insertAtIndex(self, data, index):
         if index > 0 and index > self.size:
             return None
@@ -111,8 +108,6 @@ class LinkedList:
 
         return None
 
-    '''Removing Data'''
-
     def deleteByIndex(self, index):
         if index > 0 and index > self.size:
             return None
@@ -144,29 +139,23 @@ class LinkedList:
                 current = None
                 return
 
-        else:
-            while current is not None:
-                if current.data == data:
-                    break
-                prev = current
-                current = current.next
+        while current is not None:
+            if current.data == data:
+                break
+            prev = current
+            current = current.next
 
-            if(current == None):
-                return None
+        if current == None:
+            return None
 
-            prev.next = current.next
-
-            current = None
+        prev.next = current.next
+        current = None
 
         self.size -= 1
 
-    # Clear List Data
     def deleteAll(self):
         self.head = None
         self.size = 0
-    # Get List Data
-
-    '''Reverse Linked List'''
 
     def reverse(self):
         prev = None
@@ -187,15 +176,28 @@ class LinkedList:
                     second.next = second.next.next
                     self.size -= 1
                 else:
-                    second = second.next   # put this line in an else, to avoid skipping items
+                    second = second.next
             current = second = current.next
 
 
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.addFirst(100)
-    ll.addFirst(200)
-    ll.addFirst(300)
+    ll.addLast(100)
+    ll.addLast(200)
+    ll.addLast(400)
+    ll.addLast(500)
+    ll.insertAtIndex(300, 2)
+    
+    ll.addLast(200)
+    ll.addLast(400)
+    ll.addLast(300)
+    # ll.getByIndex(1)
+    # print(ll.getMiddle())
+    # print(ll.contains(500))
+    # print(ll.indexOf(500))
+    # ll.deleteAll()
+    # ll.deleteByIndex(3)
+    # ll.deleteByData(100)
+    # ll.reverse()
     # ll.removeDuplicates()
-    ll.insertAtIndex(599, 3)
     ll.getAll()

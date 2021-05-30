@@ -146,18 +146,17 @@ class LinkedList:
                 current = None
                 return
 
-        else:
-            while current is not None:
-                if current.data == data:
-                    break
-                current = current.next
+        while current is not None:
+            if current.data == data:
+                break
+            current = current.next
 
-            if current == None:
-                return None
+        if current == None:
+            return None
 
-            current.prev.next = current.next
+        current.prev.next = current.next
 
-            current = None
+        current = None
 
         self.size -= 1
 
@@ -184,7 +183,7 @@ class LinkedList:
                     second.next = second.next.next
                     self.size -= 1
                 else:
-                    second = second.next   # put this line in an else, to avoid skipping items
+                    second = second.next
             current = second = current.next
 
 
@@ -192,6 +191,12 @@ if __name__ == '__main__':
     ll = LinkedList()
     ll.addLast(1)
     ll.addLast(2)
-    ll.addLast(1)
-    ll.addLast(3)
+    ll.addLast(4)
+    ll.insertAtIndex(3, 2)
+    # print(ll.getByIndex(1))
+    # print(ll.getMiddle())
+    # print(ll.contains(2))
+    # print(ll.indexOf(2))
+    # ll.deleteByIndex(2)
+    ll.reverse()
     ll.getAll()
